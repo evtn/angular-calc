@@ -1,0 +1,94 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0.5em;
+  border-radius: 0.5em;
+  background-color: var(--card);
+  height: max-content;
+  padding: 1rem;
+}
+
+label {
+  width: 8em;
+  flex-shrink: 0;
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+
+input {
+  width: 100%;
+  flex-grow: 1;
+  background: var(--background);
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  margin-top: 0.8em;
+}
+
+form > *:last-child {
+  margin-bottom: 0.8em;
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5em 0;
+}
+
+.result {
+  display: inline-block;
+  min-width: calc(50% - 1em);
+  box-sizing: border-box;
+  flex-grow: 1;
+  margin: 0.5em;
+}
+
+.company {
+  border-radius: 0.5em;
+  background-color: var(--card);
+  height: max-content;
+  padding: 1rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0.2em 0;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.name {
+  padding-right: 1em;
+  width: 7em;
+  display: inline-block;
+}
+
+.discount {
+  text-decoration: line-through;
+/*  color: var(--accent);*/
+  opacity: 0.5;
+  margin: 1em;
+}
+
+td {
+  padding: 0.3em;
+}
+
+table {
+  table-layout: fixed;
+}

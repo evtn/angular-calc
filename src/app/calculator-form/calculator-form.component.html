@@ -1,0 +1,37 @@
+<h1>Калькулятор поездок</h1>
+
+<form [formGroup]="inputs" (ngSubmit)="onSubmit()">
+    <div class="form-field">
+        <label for="distance-input">Расстояние, км</label>
+        <input id="distance-input" type="number" formControlName="distance" required>
+    </div>
+
+    <div class="form-field">
+        <label for="age-input">Возраст</label>
+        <input id="age-input" type="number" formControlName="age" required>
+    </div>
+
+    <div class="form-field">
+        <label for="bags-input">Багаж, кг</label>
+        <input id="bags-input" type="number" formControlName="bags" required>
+    </div>
+</form>
+
+<section id="results">
+    <div class="result" *ngFor="let company of companies">
+        <div class="company">
+            <h2 class="company-name">{{company.name}}</h2>
+            <div *ngFor="let plan of company.plans">
+                <p *ngIf="checkPlan(plan) && planPrices(plan); let prices">
+                    <span class="name"><b>{{plan.name}}</b></span>
+                    <span class="price">
+                        {{prices[0]}}
+                    </span>
+                    <span class="discount" *ngIf="prices[0] != prices[1]">
+                        {{prices[1]}}
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+<section>
